@@ -12,7 +12,7 @@ const Header = ({ setOpenModal }) => {
           <img src={StrapiLogo} alt="strapi catalog logo" />
         </Link>
         <div className="flex flex-col items-center md:flex-row">
-          <Link className="mx-2 mb-2 md:mb-0 text-lg" to="/">
+          <Link className="mx-2 mb-2 md:mb-0 text-lg" to="/categories">
             Categories
           </Link>
           <Link className="mx-2 mb-2 md:mb-0 text-lg" to="/products">

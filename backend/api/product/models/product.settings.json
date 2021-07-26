@@ -48,6 +48,10 @@
     },
     "relatedProducts": {
       "collection": "product"
+    },
+    "product_kits": {
+      "via": "products",
+      "collection": "product-kit"
     }
   }
 }
