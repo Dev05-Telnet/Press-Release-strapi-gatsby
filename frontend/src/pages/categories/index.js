@@ -9,8 +9,6 @@ import PageHeading from "~/components/styled/page-heading"
 const IndexPage = ({ data: { allStrapiCategory } }) => {
   const categories = allStrapiCategory.edges
   const seo = { title: "Categories" }
-  console.log(seo);
-  console.log(categories);
   return (
     <Layout>
       <SEO seo={seo} />

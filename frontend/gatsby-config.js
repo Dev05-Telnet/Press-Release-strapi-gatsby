@@ -36,7 +36,7 @@ module.exports = {
       options: {
         apiURL: process.env.API_URL || `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        collectionTypes: [`product`, `category`,`product-kit`],
+        collectionTypes: [`product`, `category`,`product-kit`,`press-release`],
         singleTypes: [`global`],
       },
     },
