@@ -86,7 +86,7 @@ const ReleaseList = ({ releases }) => {
 };
 
 ReleaseList.propTypes = {
-  categories: PropTypes.array,
+  releases: PropTypes.array,
 };
 
 export default ReleaseList;

@@ -19,7 +19,7 @@ const Layout = ({ children }) => {
   const [openModal, setOpenModal] = useState(false);
 
   return (
-    <div className="bg-blue-50 relative">
+    <div className="bg-gray-200 relative">
       <NavBar
         setOpenModal={setOpenModal}
         siteName={data.strapiGlobal.siteName || `Strapi`}
