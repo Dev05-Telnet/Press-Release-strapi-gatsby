@@ -9,5 +9,8 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [require("@tailwindcss/typography"),'gatsby-plugin-postcss'],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require('@tailwindcss/line-clamp'),
+    'gatsby-plugin-postcss'],
 }

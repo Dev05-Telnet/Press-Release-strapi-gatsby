@@ -4,15 +4,17 @@ import { graphql } from "gatsby";
 import Layout from "~/components/layout";
 import SEO from "~/components/seo";
 import PageHeading from "~/components/styled/page-heading";
+import BigBlogCard from "../../components/custom/big_blog_card";
 
-const IndexPage = ({ data }) => {
+const BigBlogLayout = ({ data }) => {
   const pressReleases = data.allStrapiPressRelease.edges;
   // const pressReleases = data.edges;
   const seo = { title: "Formex News room" };
   return (
     <Layout>
       <SEO seo={seo} />
-      <PageHeading>Rolex Bolg</PageHeading>
+      <PageHeading>Big Blog Card</PageHeading>  
+      <BigBlogCard releases={pressReleases} />
     </Layout>
   );
 };
@@ -73,4 +75,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage;
+export default BigBlogLayout;

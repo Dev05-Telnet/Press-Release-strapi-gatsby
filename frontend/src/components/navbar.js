@@ -6,6 +6,8 @@ import { Fragment } from "react";
 import { Disclosure, Menu, Transition } from "@headlessui/react";
 
 const navigation = [
+  { name: "Big Blog list", href: "/layouts/big-blog", current: false },
+  { name: "Tag Heuer", href: "/layouts/tagheuer", current: false },
   { name: "Categories", href: "/categories", current: false },
   { name: "Products", href: "/products", current: true },
 ];

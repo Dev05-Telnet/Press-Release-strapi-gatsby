@@ -4,15 +4,23 @@ import { graphql } from "gatsby";
 import Layout from "~/components/layout";
 import SEO from "~/components/seo";
 import PageHeading from "~/components/styled/page-heading";
+import ReleaseList from "~/components/release-list";
+import TagheuerMainNews from "../../components/custom/tagheuer_main_news";
+import TagheuerMoreNews from "../../components/custom/tagheuer_more_news";
 
-const IndexPage = ({ data }) => {
+const Tagheuer = ({ data }) => {
   const pressReleases = data.allStrapiPressRelease.edges;
   // const pressReleases = data.edges;
   const seo = { title: "Formex News room" };
   return (
     <Layout>
       <SEO seo={seo} />
-      <PageHeading>Rolex Bolg</PageHeading>
+      <PageHeading>Tagheuer Main News</PageHeading>
+      <TagheuerMainNews releases={pressReleases} />
+      <PageHeading>Tagheuer More News Section</PageHeading>
+      <TagheuerMoreNews releases={pressReleases} />
+      <PageHeading>Formex News Room</PageHeading>
+      <ReleaseList releases={pressReleases} />
     </Layout>
   );
 };
@@ -73,4 +81,4 @@ export const query = graphql`
   }
 `;
 
-export default IndexPage;
+export default Tagheuer;

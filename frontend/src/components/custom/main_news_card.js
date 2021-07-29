@@ -2,7 +2,6 @@ import React from "react";
 
 import { Link } from "gatsby";
 import ThreeLineDate from "./three-line-date";
-import ImageGrid from "./image-grid-1-by-2";
 
 import Image from "~/components/image";
 
@@ -22,7 +21,9 @@ const MainNewsCard = ({ news }) => {
             {news.title}
           </Link>
 
-          <div className="pt-4 text-gray-500">{news.description}</div>
+          <div className="pt-4 text-gray-500 line-clamp-3">
+            {news.description}
+          </div>
 
           <div className="flex flex-wrap ">
             {["Six", "Seven", "Eight"].map((tag) => {
@@ -48,7 +49,7 @@ const MainNewsCard = ({ news }) => {
       <div className="w-full grid grid-cols-4">
         {[...news.images, ...news.vedio, ...news.documents].map(
           (file, index) => {
-            if(index === 0 || index > 8) return; 
+            if (index === 0 || index > 8) return;
             return (
               <Image
                 alt="Category Image"
