@@ -4,8 +4,7 @@ import Image from "~/components/image";
 
 const HeroRightImage = ({ data }) => {
   var node = data.node;
-  var medias = [...node.images, ...node.vedio, ...node.documents];
-  console.log(node);
+  var medias = [...node.images, ...node.vedios, ...node.documents];
   return (
     <div className="flex flex-col items-center sm:px-5 md:flex-row">
       <div className="w-full md:w-1/2">
@@ -37,7 +36,7 @@ const HeroRightImage = ({ data }) => {
             <a href="#_" className="mr-1 underline">
               John Doe
             </a>{" "}
-            · <span className="mx-1">{node.releasedate}</span> ·{" "}
+            · <span className="mx-1">{node.releaseDate}</span> ·{" "}
             <span className="mx-1 text-gray-600">5 min. read</span>
           </p>
         </div>

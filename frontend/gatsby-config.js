@@ -1,6 +1,6 @@
 require("dotenv").config({
   path: `.env`,
-})
+});
 
 module.exports = {
   flags: {
@@ -34,9 +34,15 @@ module.exports = {
     {
       resolve: `gatsby-source-strapi`,
       options: {
-        apiURL: process.env.API_URL || `http://localhost:1337`,
+        apiURL: `http://3.108.138.153:1337`,
         queryLimit: 1000, // Default to 100
-        collectionTypes: [`product`, `category`,`product-kit`,`press-release`],
+        collectionTypes: [
+          `user`,
+          `product`,
+          `category`,
+          `product-kit`,
+          `press-release`,
+        ],
         singleTypes: [`global`],
       },
     },
@@ -113,9 +119,9 @@ module.exports = {
               image: node.image,
               id: node.id,
               price: node.price,
-            }
+            };
           }),
       },
     },
   ],
-}
+};

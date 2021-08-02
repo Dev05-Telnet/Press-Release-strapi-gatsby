@@ -54,14 +54,12 @@ const ReadMoreSection = ({ node }) => {
 };
 
 const NewsCard = ({ news }) => {
-  console.log("news description")
-  console.log(news.description);
-  var medias = [...news.images, ...news.vedio, ...news.documents];
+  var medias = [...news.images, ...news.vedios, ...news.documents];
   return (
     <div className="group w-full flex flex-col max-w-lg mx-auto bg-white p-2 rounded-sm shadow hover:shadow-2xl transition duration-500 ease-in-out transform hover:-translate-y-1 hover:scale-100">
       <ImageGrid medias={medias} />
       <div className="flex p-2 divide-x ">
-        <ThreeLineDate dateString={news.releasedate} />
+        <ThreeLineDate dateString={news.releaseDate} />
         <div className="p-2 w-full">
           <Link
             to={`/press-release/${news.id}`}
@@ -77,6 +75,7 @@ const NewsCard = ({ news }) => {
                 <Link
                   to={`/tags/${tag.toLowerCase()}`}
                   className="uppercase mt-2 mr-2 bg-gray-200 rounded-md px-2 py-0.5 text-xs hover:bg-blue-800 hover:text-white "
+                  key={tag}
                 >
                   {tag}
                 </Link>

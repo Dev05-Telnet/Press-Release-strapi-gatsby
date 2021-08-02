@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => {
         <HeroRightImage data={pressReleases[0]} />
         <div className="grid grid-cols-12 pb-10 sm:px-5 gap-x-8 gap-y-16">
           {pressReleases.map(({ node }, index) => {
-            return <SmallBlogCard data={node} />;
+            return <SmallBlogCard data={node} key={node.id}/>;
           })}
         </div>
       </div>
@@ -31,7 +31,7 @@ const IndexPage = ({ data }) => {
 export const query = graphql`
   {
     allStrapiPressRelease(
-      sort: { fields: releasedate, order: DESC }
+      sort: { fields: releaseDate, order: DESC }
       limit: 10
     ) {
       edges {
@@ -39,7 +39,7 @@ export const query = graphql`
           id
           title
           description
-          releasedate(formatString: "DD MMM YYYY")
+          releaseDate(formatString: "DD MMM YYYY")
           products {
             id
             title
@@ -56,7 +56,7 @@ export const query = graphql`
               }
             }
           }
-          vedio {
+          vedios {
             localFile {
               childImageSharp {
                 gatsbyImageData(

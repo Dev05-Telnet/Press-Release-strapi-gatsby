@@ -7,10 +7,10 @@ const BigBlogCard = ({ releases }) => {
   return (
     <div className="grid grid-cols-8 gap-2 sm:gap-5 w-5/6 sm:w-1/2 m-auto">
       {releases.map(({ node }) => {
-        var medias = [...node.images, ...node.vedio, ...node.documents];
+        var medias = [...node.images, ...node.vedios, ...node.documents];
 
         return (
-          <div className="bg-white flex flex-col justify-between col-span-8 overflow-hidden transition-shadow duration-500 rounded-none sm:border theme-bg theme-shadow theme-border hover:shadow-xl ease dark:bg-dark-900 sm:rounded-xl xl:col-span-8">
+          <div className="bg-white flex flex-col justify-between col-span-8 overflow-hidden transition-shadow duration-500 rounded-none sm:border theme-bg theme-shadow theme-border hover:shadow-xl ease dark:bg-dark-900 sm:rounded-xl xl:col-span-8" key={node.id}>
             <div
               className="relative p-0 rounded-none cursor-pointer sm:rounded-t-xl"
               onclick="feedLinkClick('/tnylea/laravel-livewire-trix-editor-component', '4890', 'tutorial', event, 'Laravel Livewire Trix Editor Component')"

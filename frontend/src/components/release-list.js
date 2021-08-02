@@ -9,13 +9,13 @@ const ReleaseList = ({ releases }) => {
   return (
     <div className="grid grid-cols-1 gap-2 max-w-screen-lg m-auto">
       {releases.map(({ node }) => {
-        var medias = [...node.images, ...node.vedio, ...node.documents];
+        var medias = [...node.images, ...node.vedios, ...node.documents];
         return (
           <Card key={node.id}>
             <div className="h-full grid grid-cols-1 sm:grid-cols-2 sm:px-3 sm:py-12 sm:gap-x-8 pb-8 md:py-3">
               <div className="relative z-10 col-start-1 row-start-1 px-4 pt-40 sm:pt-2 pb-3 bg-gradient-to-t from-black sm:bg-none">
                 <p className="text-sm font-medium text-white sm:mb-1 sm:text-gray-500">
-                  {node.releasedate}
+                  {node.releaseDate}
                 </p>
                 <h2 className="text-xl font-semibold text-white sm:text-2xl sm:leading-7 sm:text-black md:text-3xl">
                   {node.title}
@@ -26,7 +26,7 @@ const ReleaseList = ({ releases }) => {
                   data={{ average: node.images.length, text: "Images" }}
                 />
                 <CounterWithIconAndText
-                  data={{ average: node.vedio.length, text: "Vedios" }}
+                  data={{ average: node.vedios.length, text: "Vedios" }}
                 />
                 <CounterWithIconAndText
                   data={{

@@ -9,14 +9,14 @@ const TagheuerMainNews = ({ releases }) => {
     <div className="grid grid-cols-6 gap-4 m-auto">
       {/* Main news section starts from here */}
       <div className="col-span-6 lg:row-span-3 lg:col-span-4 bg-white">
-       <MainNewsCard news = {releases[0].node}/>
+       <MainNewsCard news = {releases[0].node} key={releases[0].node.id}/>
       </div>
       {/* Right side news section starts from here */}
       {releases.map(({ node }, index) => {
         if (index === 0) return;
         return (
-          <div className="col-span-6 sm:col-span-3 lg:col-span-2">
-            <NewsCard news={node} />
+          <div className="col-span-6 sm:col-span-3 lg:col-span-2" key={node.id}>
+            <NewsCard news={node}/>
           </div>
         );
       })}

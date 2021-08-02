@@ -28,7 +28,7 @@ const Tagheuer = ({ data }) => {
 export const query = graphql`
   {
     allStrapiPressRelease(
-      sort: { fields: releasedate, order: DESC }
+      sort: { fields: releaseDate, order: DESC }
       limit: 10
     ) {
       edges {
@@ -36,7 +36,7 @@ export const query = graphql`
           id
           title
           description
-          releasedate(formatString: "DD MMM YYYY")
+          releaseDate(formatString: "DD MMM YYYY")
           products {
             id
             title
@@ -53,7 +53,7 @@ export const query = graphql`
               }
             }
           }
-          vedio {
+          vedios {
             localFile {
               childImageSharp {
                 gatsbyImageData(

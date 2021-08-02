@@ -2,8 +2,7 @@ import React from "react";
 import Image from "~/components/image";
 
 const SmallBlogCard = ({data}) => {
-  console.log(data)
-  var medias = [...data.images, ...data.vedio, ...data.documents];
+  var medias = [...data.images, ...data.vedios, ...data.documents];
 
   return (
     <div className="flex flex-col items-start col-span-12 space-y-3 sm:col-span-6 xl:col-span-4">
@@ -26,7 +25,7 @@ const SmallBlogCard = ({data}) => {
         <a href="#_" className="mr-1 underline">
           Mary Jane
         </a>{" "}
-        · <span className="mx-1">{data.releasedate}</span> ·{" "}
+        · <span className="mx-1">{data.releaseDate}</span> ·{" "}
         <span className="mx-1 text-gray-600">3 min. read</span>
       </p>
     </div>
